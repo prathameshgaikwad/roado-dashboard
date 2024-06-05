@@ -1,4 +1,4 @@
-import { Drawer, List, ListItemButton } from "@mui/material";
+import { Card, CardContent, List, ListItemButton } from "@mui/material";
 
 import Logo from "./Logo";
 
@@ -18,35 +18,35 @@ const Sidebar = () => {
   ];
 
   return (
-    <Drawer
-      variant="permanent"
-      anchor="left"
+    <Card
       sx={{
         bgcolor: "#fffff",
         height: "100vh",
+        minWidth: 64,
       }}>
-      <List
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: 64,
-        }}>
-        <Logo />
-        {buttons.map((button, i) => {
-          return (
-            <ListItemButton
-              key={i}
-              onClick={() => {
-                alert(`go to ${button}`);
-              }}
-              sx={{ py: "10px" }}>
-              <img src={`public/${button}.svg`} alt={button} />
-            </ListItemButton>
-          );
-        })}
-      </List>
-    </Drawer>
+      <CardContent sx={{ p: 0 }}>
+        <List
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}>
+          <Logo />
+          {buttons.map((button, i) => {
+            return (
+              <ListItemButton
+                key={i}
+                onClick={() => {
+                  alert(`go to ${button}`);
+                }}
+                sx={{ py: "10px" }}>
+                <img src={`public/${button}.svg`} alt={button} />
+              </ListItemButton>
+            );
+          })}
+        </List>
+      </CardContent>
+    </Card>
   );
 };
 
