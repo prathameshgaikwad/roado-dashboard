@@ -1,11 +1,11 @@
 import { CssBaseline } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Typography variant="h2">Hello World!</Typography>
+      <Sidebar />
     </>
   );
 }
