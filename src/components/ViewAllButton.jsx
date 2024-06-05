@@ -1,13 +1,15 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 
-const ViewAllButton = () => {
+const ViewAllButton = ({ url, isLarge }) => {
   return (
-    <Button variant={"text"} color="inherit" sx={{ p: 0 }}>
-      <Typography
-        fontSize={"12px"}
-        sx={{ textDecoration: "underline", textTransform: "capitalize" }}>
-        View All
-      </Typography>
+    <Button variant={"text"} sx={{ p: 0 }}>
+      <Link href={url}>
+        <Typography
+          fontSize={isLarge ? "14px" : "12px"}
+          sx={{ textDecoration: "underline", textTransform: "capitalize" }}>
+          View All
+        </Typography>
+      </Link>
     </Button>
   );
 };

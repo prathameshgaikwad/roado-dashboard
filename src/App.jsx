@@ -1,6 +1,7 @@
 import { CssBaseline, Stack } from "@mui/material";
 
 import ActivityPanel from "./components/ActivityPanel";
+import AlertsSection from "./components/AlertsSection";
 import Dashboard from "./components/Dashboard";
 import QuickActions from "./components/QuickActions";
 import Sidebar from "./components/Sidebar";
@@ -13,9 +14,10 @@ function App() {
       <Stack
         direction={"column"}
         sx={{ width: "100%", px: 2, mt: "22px" }}
-        spacing={4}>
+        spacing={"24px"}>
         <Dashboard />
         <QuickActions />
+        <AlertsSection />
       </Stack>
       <ActivityPanel />
     </Stack>

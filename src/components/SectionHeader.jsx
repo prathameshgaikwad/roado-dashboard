@@ -7,6 +7,7 @@ const SectionHeader = ({
   subtitle,
   isExpandable = false,
   isLargeTitle = false,
+  url,
 }) => {
   return (
     <Stack
@@ -15,7 +16,7 @@ const SectionHeader = ({
       justifyContent={"space-between"}>
       <Stack direction={"column"}>
         <Typography
-          fontWeight={"bold"}
+          fontWeight={"500"}
           fontSize={isLargeTitle ? "16px" : "14px"}
           noWrap>
           {title}
@@ -31,7 +32,7 @@ const SectionHeader = ({
           </Typography>
         )}
       </Stack>
-      {isExpandable && <ViewAllButton />}
+      {isExpandable && <ViewAllButton url={url} isLarge={isLargeTitle} />}
     </Stack>
   );
 };
