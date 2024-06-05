@@ -25,6 +25,7 @@ const QuickActions = () => {
           mt: "14px",
           py: "14px",
           bgcolor: "#FFF",
+          boxShadow: "0px 2px 8px 0px #1A38750D",
         }}>
         {quickActionButtons.map((button, i) => {
           return (
