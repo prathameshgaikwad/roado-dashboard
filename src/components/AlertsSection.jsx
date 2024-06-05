@@ -10,6 +10,7 @@ const AlertsSection = () => {
         title={"High Priority Alerts (14)"}
         isLargeTitle
         isExpandable
+        hasArrow={true}
       />
       <Grid container spacing={2} mt={"14px"}>
         <Grid item xs={12} md={6}>

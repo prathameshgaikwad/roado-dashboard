@@ -8,6 +8,7 @@ const SectionHeader = ({
   isExpandable = false,
   isLargeTitle = false,
   url,
+  hasArrow,
 }) => {
   return (
     <Stack
@@ -32,7 +33,9 @@ const SectionHeader = ({
           </Typography>
         )}
       </Stack>
-      {isExpandable && <ViewAllButton url={url} isLarge={isLargeTitle} />}
+      {isExpandable && (
+        <ViewAllButton url={url} isLarge={isLargeTitle} hasArrow={hasArrow} />
+      )}
     </Stack>
   );
 };
