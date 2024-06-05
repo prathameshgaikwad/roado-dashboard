@@ -11,7 +11,7 @@ const QuickActions = () => {
     { src: "add-indents", title: "Add Indents" },
   ];
   return (
-    <Stack direction={"column"} width={"100%"} sx={{ mx: 2 }}>
+    <Stack direction={"column"} width={"100%"}>
       <Typography fontSize={"16px"} fontWeight={"bold"}>
         Quick Actions
       </Typography>
