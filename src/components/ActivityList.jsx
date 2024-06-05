@@ -1,10 +1,10 @@
-import { Card, CardContent, Divider, List } from "@mui/material";
+import { Divider, List, Paper } from "@mui/material";
 
 import ActivityItem from "./ActivityItem";
 
-const ActivityList = () => {
+const ActivityList = ({ list }) => {
   return (
-    <Card
+    <Paper
       elevation={0}
       variant="outlined"
       sx={{
@@ -12,34 +12,17 @@ const ActivityList = () => {
         mt: 2,
         borderColor: "#CBCBCB",
       }}>
-      <CardContent sx={{ padding: 0 }}>
-        <List>
-          <ActivityItem
-            content={
-              "Gurpreet Singh (Dispatch team) has created Load No. I-I-AAA-1325"
-            }
-          />
-          <Divider sx={{ borderColor: "#CBCBCB" }} />
-          <ActivityItem
-            content={
-              "Gurpreet Singh (Dispatch team) has created Load No. I-I-AAA-1325"
-            }
-          />
-          <Divider sx={{ borderColor: "#CBCBCB" }} />
-          <ActivityItem
-            content={
-              "Gurpreet Singh (Dispatch team) has created Load No. I-I-AAA-1325"
-            }
-          />
-          <Divider sx={{ borderColor: "#CBCBCB" }} />
-          <ActivityItem
-            content={
-              "Gurpreet Singh (Dispatch team) has created Load No. I-I-AAA-1325"
-            }
-          />
-        </List>
-      </CardContent>
-    </Card>
+      <List>
+        {list.map((activity, i) => (
+          <>
+            <ActivityItem key={i} content={activity} />
+            {i !== list.length - 1 && (
+              <Divider sx={{ borderColor: "#CBCBCB" }} />
+            )}
+          </>
+        ))}
+      </List>
+    </Paper>
   );
 };
 

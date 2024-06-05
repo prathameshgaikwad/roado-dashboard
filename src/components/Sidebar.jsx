@@ -23,6 +23,7 @@ const Sidebar = () => {
         bgcolor: "#fffff",
         height: "100vh",
         minWidth: 64,
+        boxShadow: "0px 2px 8px 0px #1A38750D",
       }}>
       <CardContent sx={{ p: 0 }}>
         <List
